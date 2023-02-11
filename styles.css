@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    outline: none;
+    font-size: 16px;
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: -9999;
+
+}
+
+.bg .up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 600px;
+    border-radius: 0 0 300px 300px;
+    transform: translateX(-120px);
+    background-image: linear-gradient(-45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+.bg .down {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 600px;
+    transform: translateX(80px);
+    border-radius: 300px 300px 0 0;
+    background-color: hsl(270, 20%, 96%);
+}
+
+
+main.wrapper {
+    width: min(1000px, 100%);
+    margin: 40px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 10%;
+}
+
+
+main.wrapper .text {
+    width: min(500px, 70%);
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+}
+
+main.wrapper .text h3 {
+    font-size: 2.2rem;
+    color: hsl(271, 36%, 24%);
+}
+
+main.wrapper .text p {
+    font-size: 1.2rem;
+    color: hsl(270, 7%, 64%);
+}
+
+.phone {
+    width: 325px;
+    height: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 30px;
+    border-radius: 40px;
+    background-color: white;
+    font-size: 20px;
+    box-shadow: 5px 10px 60px rgba(221, 221, 221, 0.753);
+}
+
+.in-phone-wrap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 30px;
+}
+
+.pill-shape {
+    position: absolute;
+    height: 30px;
+    top: -12px;
+    left: 20%;
+    right: 20%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.profile-infos {
+    padding: 30px 20px 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(-45deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 30px 30px 8px 8px;
+}
+
+
+.pf-info {
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 3px solid white;
+}
+
+.info .state {
+    font-size: 0.7rem;
+    color: hsl(276, 100%, 81%);
+}
+
+.more-info-icon {
+    width: 10px;
+    height: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-info-icon div {
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.chats {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    padding-top: 20px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 415px;
+    /* be careful with the height */
+    border-radius: 20px;
+    animation: justify-start 1ms linear 8s 1 forwards alternate;
+}
+
+
+
+
+.chats::-webkit-scrollbar-thumb {
+    background-color: hsl(276, 55%, 52%);
+    border-radius: 10px;
+}
+
+.chats::-webkit-scrollbar {
+    width: 3px;
+
+}
+
+.chats .chat-box {
+    padding: 7px 15px;
+    max-width: 65%;
+    scroll-snap-align: start;
+    max-height: 0;
+    margin: 0;
+    /* opacity: 0; */
+    transform: scale(0.00001);
+    animation: pop-in 250ms ease 1s 1 forwards alternate;
+}
+
+.chats .chat-box:nth-child(0) {
+    animation-delay: 600ms;
+}
+
+.chats .chat-box:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+.chats .chat-box:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+.chats .chat-box:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+.chats .chat-box:nth-child(4) {
+    animation-delay: 2.9s;
+}
+
+.chats .chat-box:nth-child(5) {
+    animation-delay: 3.4s;
+}
+
+.chats .chat-box:nth-child(6) {
+    animation-delay: 4s;
+}
+
+.chats .chat-box:nth-child(7) {
+    animation-delay: 4.6s;
+}
+
+.chats .chat-box:nth-child(8) {
+    animation-delay: 5s;
+}
+
+.chats .chat-box:nth-child(9) {
+    animation-delay: 6.4s;
+}
+
+.chats .chat-box:nth-child(10) {
+    animation-delay: 7s;
+}
+
+/* .chats .chat-box:nth-child(11) {
+    animation-delay: 7.3s;
+}
+
+.chats .chat-box:nth-child(12) {
+    animation-delay: 7.7s;
+} */
+
+
+.chats .chat-box p {
+    font-size: 0.7rem;
+}
+
+.chats .left.chat-box {
+    color: hsl(276, 55%, 52%);
+    align-self: flex-start;
+    border-radius: 13px 13px 13px 4px;
+    background-color: hsl(272, 43%, 93%);
+    margin-left: 10px;
+
+}
+
+.chats .right.chat-box {
+    color: hsl(271, 15%, 43%);
+    align-self: flex-end;
+    border-radius: 13px 13px 4px;
+    background-color: white;
+    margin-right: 10px;
+    box-shadow: 0 5px 7px rgb(236, 236, 236);
+}
+
+
+.chats .chat-box.dog-images {
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-end;
+    margin-right: 10px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.chats .dog-images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+
+}
+
+
+.chats .left.chat-box.price {
+    display: flex;
+    column-gap: 20px;
+    background-image: linear-gradient(-45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    color: hsl(272, 43%, 93%);
+}
+
+
+.chats .left.chat-box.price p {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.chats .left.chat-box.price p input[name="pricing"] {
+    min-width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.chats .left.chat-box.price p input[name="pricing"]+label {
+    font-size: 0.7rem;
+}
+
+.price p input[name="pricing"]:checked {
+    border: 1px solid white;
+    background-image: linear-gradient(270deg, hsl(270, 20%, 96%), hsl(289, 100%, 72%))
+}
+
+.message-input {
+    margin: 10px;
+    height: 40px;
+    position: relative;
+}
+
+.message-input input[type="text"] {
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+.message-input input[type="text"]:focus-visible {
+    border: 2px solid hsl(289, 100%, 72%);
+}
+
+input[type="text"]::placeholder {
+    font-size: 0.7rem;
+    color: hsl(206, 6%, 79%);
+}
+
+
+.message-input .send-message {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background-image: linear-gradient(102deg, hsl(0, 0%, 60%), hsl(271, 36%, 24%));
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        max-height: 0;
+        margin-bottom: 0;
+        opacity: 0;
+
+    }
+
+    10% {
+        transform: scale(0.5);
+        max-height: fit-content;
+        opacity: 0;
+        margin-bottom: 5px;
+    }
+
+    50% {
+        transform: scale(1.1);
+        height: fit-content;
+        opacity: 1;
+        margin-bottom: 5px;
+
+    }
+
+    100% {
+        transform: scale(1.0);
+        max-height: fit-content;
+        opacity: 1;
+        margin-bottom: 10px;
+
+    }
+
+}
+
+@keyframes justify-start {
+    from {
+        justify-content: flex-end;
+        cursor: initial;
+    }
+
+    to {
+        justify-content: flex-start;
+        cursor: grab;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bg .up {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 400px;
+        border-radius: 0 0 300px 300px;
+        transform: translateX(-80px);
+        background-image: linear-gradient(-45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    }
+
+    .bg .down {
+        width: 250px;
+        height: 400px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .phone {
+        margin-bottom: 50px;
+    }
+
+    main.wrapper .text {
+        text-align: center;
+    }
+}
