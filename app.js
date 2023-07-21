@@ -25,7 +25,7 @@ const chat = document.querySelector(".chats");
         new2ndRelpy.innerHTML = `<p class=""> it's time to gonback to the developers portfolio;
         </br>    </br>    </br>
         this links back to his site.
-        => <a href="#">Nwoko victor</a>.
+        => <a href="https://nwoko.netlify.app">nwoko victor</a>.
         </p>`
         new2ndRelpy.classList += "chat-box left";
     
