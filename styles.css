@@ -241,6 +241,10 @@ main.wrapper .text p {
     animation-delay: 7s;
 }
 
+.link {
+    font-size: 0.85rem;
+    color:white;
+}
 /* .chats .chat-box:nth-child(11) {
     animation-delay: 7.3s;
 }
